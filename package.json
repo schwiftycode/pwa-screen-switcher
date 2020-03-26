@@ -1,0 +1,37 @@
+{
+  "name": "pwa-screen-switcher",
+  "version": "1.0.0",
+  "description": "A screen switcher for animating between screens in a pwa setting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schwiftycode/pwa-screen-switcher.git"
+  },
+  "keywords": [
+    "screen",
+    "switcher",
+    "pwa",
+    "progressive",
+    "web",
+    "app",
+    "animation",
+    "animated",
+    "easing",
+    "easein",
+    "easeout",
+    "easeinout",
+    "screens",
+    "switching",
+    "navigation",
+    "navigate"
+  ],
+  "author": "Taylor Michel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schwiftycode/pwa-screen-switcher/issues"
+  },
+  "homepage": "https://github.com/schwiftycode/pwa-screen-switcher#readme"
+}
