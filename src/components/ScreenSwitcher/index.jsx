@@ -112,7 +112,7 @@ export const Easings = {
 }
 
 const ScreenSwitcher = forwardRef((props, ref) => {
-    const [currentScreen, setCurrentScreen] = useState('SignIn')
+    const [currentScreen, setCurrentScreen] = useState(null)
     const [nextScreen, setNextScreen] = useState(null)
     const currentScreenContainer = useRef(null)
     const nextScreenContainer = useRef(null)
@@ -123,6 +123,9 @@ const ScreenSwitcher = forwardRef((props, ref) => {
     useEffect(_ => {
         currentScreenContainer.current.style.opacity = 1
         nextScreenContainer.current.style.opacity = 0
+        if (props.initialScreen) {
+            setCurrentScreen(props.initialScreen)
+        }
     }, [])
 
     useImperativeHandle(ref, _ => ({
@@ -138,7 +141,6 @@ const ScreenSwitcher = forwardRef((props, ref) => {
             let now = new Date().getTime();
             animationStart = now
 
-            console.log(animation)
             // Start Animation
             switch (animation) {
                 case Animations.SlideFromRight:
@@ -164,7 +166,6 @@ const ScreenSwitcher = forwardRef((props, ref) => {
     }))
 
     const animateSlideFromRight = (duration, easing) => {
-        console.log('Start Slide From Right Animation')
         // Prepare for animation
         nextScreenContainer.current.style.opacity = 1
         currentScreenContainer.current.style.opacity = 1
@@ -178,7 +179,6 @@ const ScreenSwitcher = forwardRef((props, ref) => {
     }
 
     const animateSlideFromLeft = (duration, easing) => {
-        console.log('Start Slide From Left Animation')
         // Prepare for animation
         nextScreenContainer.current.style.opacity = 1
         currentScreenContainer.current.style.opacity = 1
@@ -192,7 +192,6 @@ const ScreenSwitcher = forwardRef((props, ref) => {
     }
 
     const animateFade = (duration, easing) => {
-        console.log('Start Fade Animation')
         // Prepare for animation
         nextScreenContainer.current.style.opacity = 0
         currentScreenContainer.current.style.opacity = 1
@@ -208,7 +207,6 @@ const ScreenSwitcher = forwardRef((props, ref) => {
         const animStart = animationStart
         const animPercent = (now - animStart) / duration
         const animEasePercent = easing(animPercent, 0, 1, 1)
-        console.log(animEasePercent)
         return animEasePercent
     }
 
