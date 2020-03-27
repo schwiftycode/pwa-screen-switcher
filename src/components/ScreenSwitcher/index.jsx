@@ -2,6 +2,14 @@ import React, { useState, useRef, useImperativeHandle, forwardRef, useEffect } f
 
 import './style.css';
 
+export const Animations = {
+    Fade: 'Fade',
+    SlideFromLeft: 'SlideFromLeft',
+    SlideFromRight: 'SlideFromRight',
+    SlideFromTop: 'SlideFromTop',
+    SlideFromBottom: 'SlideFromBottom',
+}
+
 export const Easings = {
     linearTween: function (t, b, c, d) {
         return c * t / d + b;
@@ -101,14 +109,6 @@ export const Easings = {
         t -= 2;
         return c / 2 * (Math.sqrt(1 - t * t) + 1) + b;
     },
-}
-
-export const Animations = {
-    Fade: 'Fade',
-    SlideFromLeft: 'SlideFromLeft',
-    SlideFromRight: 'SlideFromRight',
-    SlideFromTop: 'SlideFromTop',
-    SlideFromBottom: 'SlideFromBottom',
 }
 
 const ScreenSwitcher = forwardRef((props, ref) => {

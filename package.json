@@ -1,37 +1,45 @@
 {
-  "name": "pwa-screen-switcher",
-  "version": "1.0.2",
-  "description": "A screen switcher for animating between screens in a pwa setting",
-  "main": "index.js",
+  "name": "animated-screen-switcher",
+  "version": "0.0.4",
+  "private": false,
+  "main": "dist/ScreenSwitcher/index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/schwiftycode/pwa-screen-switcher.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "screen",
-    "switcher",
-    "pwa",
-    "progressive",
-    "web",
-    "app",
-    "animation",
-    "animated",
-    "easing",
-    "easein",
-    "easeout",
-    "easeinout",
-    "screens",
-    "switching",
-    "navigation",
-    "navigate"
-  ],
-  "author": "Taylor Michel <taylor.b.michel@hotmail.com> (https://tmichelpro.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/schwiftycode/pwa-screen-switcher/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/schwiftycode/pwa-screen-switcher#readme"
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.9.4"
+  }
 }
