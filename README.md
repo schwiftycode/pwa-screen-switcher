@@ -1,6 +1,6 @@
 ## Project Deprecated
 
-This project is being moved to a component library.  It can be found at (https://www.npmjs.com/package/animated-screen-switcher)
+This project is being moved to a component library.  It can be found at [React PWA Components](https://www.npmjs.com/package/react-pwa-components)
 
 ## Project Bootstrapping
 
