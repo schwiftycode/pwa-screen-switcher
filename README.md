@@ -1,3 +1,6 @@
+This project is being moved to a component library.  It can be found at (https://www.npmjs.com/package/animated-screen-switcher)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
